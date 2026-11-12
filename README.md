@@ -116,9 +116,26 @@ databricks bundle run lakeguard_orders -t dev
 
 **Phase 4:** Add performance tests at 1M/10M/100M rows, controlled fault injection, reproducible benchmarks, deployment smoke tests, cost monitoring, and documented mean-time-to-detect/resolve metrics.
 
-## Research / publication evaluation
+## Related Publications
 
-Potential experiments: compare static vs seasonality-aware anomaly thresholds; evaluate false-positive rate, detection latency, mean time to resolution, agent proposal accuracy, unsafe action prevention and per-incident inference cost. Publish methods, datasets, limitations and independent replication instructions. **Do not present hypothetical benchmark numbers as measured outcomes.**
+LakeGuard AI builds on technical research and industry perspectives concerning enterprise data reliability, intelligent anomaly detection, and Agentic AI-driven data operations.
+
+The following publications explore concepts related to the architecture and engineering principles demonstrated in this repository.
+
+**1. AI-Driven Enterprise Data Ingestion Framework: How Lokeshkumar Madabathula Is Transforming Global Analytics Platforms**
+**Publication:**AI Journal
+**Author:** Lokeshkumar Madabathula
+**Article:** https://aijourn.com/ai-driven-enterprise-data-ingestion-framework-how-lokeshkumar-madabathula-is-transforming-global-analytics-platforms/
+**Relevance:** Discusses AI-driven enterprise data engineering, architectural considerations, and operational reliability.
+
+**2. From Anomaly Detection to Agentic AI: Engineering Intelligent Data Reliability on Databricks**
+**Publication:** HackerNoon
+**Author:** Lokeshkumar Madabathula
+**Article:** https://hackernoon.com/from-anomaly-detection-to-agentic-ai-engineering-intelligent-data-reliability-on-databricks
+**Relevance:** Examines the evolution of traditional anomaly detection toward intelligent, agent-assisted investigation and remediation in enterprise data systems.
+---
+
+## License
 
 ## Security
 

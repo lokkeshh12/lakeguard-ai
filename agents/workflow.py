@@ -1,6 +1,9 @@
 """LangGraph incident triage with safe default: advisory only."""
+
 from typing import TypedDict
+
 from lakeguard.policy import Action, evaluate_action
+
 
 class AgentState(TypedDict, total=False):
     incident_id: str
@@ -32,6 +35,7 @@ def gate(state: AgentState) -> dict:
 def build_graph():
     """Compile an explicit investigation → proposal → policy graph."""
     from langgraph.graph import END, START, StateGraph
+
     graph = StateGraph(AgentState)
     graph.add_node("investigate", investigate)
     graph.add_node("propose", propose)

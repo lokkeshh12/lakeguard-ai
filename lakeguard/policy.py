@@ -1,5 +1,7 @@
 """Deterministic safety policy for proposed incident actions."""
+
 from enum import Enum
+
 
 class Action(str, Enum):
     NOTIFY = "notify"
@@ -9,7 +11,9 @@ class Action(str, Enum):
     REWRITE_HISTORY = "rewrite_history"
 
 
-def evaluate_action(action: Action, *, authorized: bool, retry_count: int = 0) -> tuple[bool, str]:
+def evaluate_action(
+    action: Action, *, authorized: bool, retry_count: int = 0
+) -> tuple[bool, str]:
     """Allow only bounded, explicitly authorized low-risk actions."""
     if not authorized:
         return False, "Execution not authorized"

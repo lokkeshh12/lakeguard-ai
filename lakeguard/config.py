@@ -1,11 +1,17 @@
 """Typed configuration and fully qualified identifier validation."""
+
 import re
+
 from pydantic import BaseModel, Field, field_validator
 
-_IDENTIFIER = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*$")
+_IDENTIFIER = re.compile(
+    r"^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*$"
+)
+
 
 class PipelineConfig(BaseModel):
     """Validated configuration for a single ingestion pipeline."""
+
     source_path: str
     schema_location: str
     checkpoint: str

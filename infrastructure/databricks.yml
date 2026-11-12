@@ -1,0 +1,23 @@
+bundle:
+  name: lakeguard-ai
+include:
+  - resources/*.yml
+variables:
+  catalog:
+    default: main
+  schema:
+    default: lakeguard
+  source_path:
+    default: /Volumes/main/lakeguard/landing/orders
+  checkpoint_root:
+    default: /Volumes/main/lakeguard/checkpoints
+workspace:
+  root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+targets:
+  dev:
+    mode: development
+    default: true
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}

@@ -1,0 +1,14 @@
+pipelines:
+  orders:
+    source_path: /Volumes/main/lakeguard/landing/orders
+    schema_location: /Volumes/main/lakeguard/checkpoints/orders_schema
+    checkpoint: /Volumes/main/lakeguard/checkpoints/orders_bronze
+    bronze_table: main.lakeguard.bronze_orders
+    silver_table: main.lakeguard.silver_orders
+    quarantine_table: main.lakeguard.quarantine_orders
+    gold_table: main.lakeguard.gold_daily_orders
+    primary_key: order_id
+    sequence_column: event_ts
+    required_columns: [order_id, customer_id, amount, event_ts]
+    max_null_rate: 0.05
+    min_volume_ratio: 0.6
